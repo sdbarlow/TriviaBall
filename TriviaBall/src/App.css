@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'game_overregular';
+  src: url('fonts/webfontkit-20230305-192849/gameover-webfont.woff2') format('woff2'),
+       url('fonts/webfontkit-20230305-192849/gameover-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+.test{
+font-size: 80px;
+ font-family: 'game_overregular';
+ color: #1c6e13;
+ -webkit-text-stroke: 5px black;
+ text-shadow: 5px 5px 0px rgba(0,0,0,100) ;
+}
