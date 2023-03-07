@@ -1,0 +1,28 @@
+{
+    "characters": [
+      {
+        "id": 1,
+        "image": "./images/KidFlash.png"
+      },
+      {
+        "id": 2,
+        "image": "./images/Mario.png"
+      },
+      {
+        "id": 3,
+        "image": "./images/MegaMan.png"
+      },
+      {
+        "id": 4,
+        "image": "./images/RunGuy.png"
+      },
+      {
+        "id": 5,
+        "image": "./images/Sensei.png"
+      },
+      {
+        "id": 6,
+        "image": "./images/Wrestler.png"
+      }
+    ]
+  }
