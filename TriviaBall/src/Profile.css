@@ -1,3 +1,35 @@
-h1{
-    color: red;
+#header{
+    font-size: 2vw;
+    display: block;
+text-align: center;
+color: black;
+padding-left: none;
+}
+
+#home{
+    display: block;
+    color: black;
+    font-size: 1vw;
+    padding-left: 0.5vw;
+    padding-top: 0.5vw;
+}
+
+.parent{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1vh 10vh;
+    background-color: white;
+}
+
+.grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 15%);
+    grid-auto-rows: 25%;
+    grid-gap: 5%;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
 }

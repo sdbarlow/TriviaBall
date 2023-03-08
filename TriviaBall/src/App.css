@@ -77,10 +77,10 @@ body {
 
 #joystick-hole {
   height: 17vh;
-  width: 5vw;
+  width: 6vh;
   background-color: black;
   position: absolute;
-  left: 26vh;
+  left: 32vh;
   top: 82vh;
   border-radius: 50%;
   transform: rotate(90deg);
@@ -90,7 +90,7 @@ body {
   height: 16vh;
   width: 2vh;
   position: absolute;
-  left: 21.2vh;
+  left: 27.2vh;
   top: 76vh;
   border: 2px solid black;
   background-color: gray;
@@ -103,8 +103,8 @@ body {
   width: 12vh;
   background-color: #ffcc00;
   position: absolute;
-  left: 9.1vh;
-  top: 65.5vh;
+  left: 15.3vh;
+  top: 65.9vh;
   border: 2px solid black;
   border-radius: 100%;
 }

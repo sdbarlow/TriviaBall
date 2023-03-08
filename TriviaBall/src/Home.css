@@ -20,20 +20,21 @@
 }
 
 .test{
-  font-size: 80px;
+  font-size: 6vw;
    font-family: 'game_overregular';
    color: #1c6e13;
-   -webkit-text-stroke: 2px white;
-   text-shadow: 1px 1px 1px #919191,
-        2px 2px 1px #919191,
-        3px 3px 1px #919191,
-        4px 4px 1px #919191,
-        5px 5px 1px #919191,
-        6px 6px 1px #919191,
-        7px 7px 1px #919191,
-        8px 8px 1px #919191,
-        9px 9px 1px #919191,
-        10px 10px 1px #919191;
+   text-shadow: 1px 1px 0 black,
+        2px 2px 0 black,
+        3px 3px 0 black,
+        4px 4px 0 black,
+        5px 5px 0 black,
+        6px 6px 0 black,
+        7px 7px 0 black,
+        8px 8px 0 black,
+        9px 9px 0 black,
+        10px 10px 0 black,
+        -3px -3px 0 white,
+        13px 13px 0 white;
     letter-spacing: .4rem;
    text-align: center;
   }

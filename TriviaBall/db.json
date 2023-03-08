@@ -1,28 +1,130 @@
 {
-    "characters": [
-      {
-        "id": 1,
-        "image": "./images/KidFlash.png"
-      },
-      {
-        "id": 2,
-        "image": "./images/Mario.png"
-      },
-      {
-        "id": 3,
-        "image": "./images/MegaMan.png"
-      },
-      {
-        "id": 4,
-        "image": "./images/RunGuy.png"
-      },
-      {
-        "id": 5,
-        "image": "./images/Sensei.png"
-      },
-      {
-        "id": 6,
-        "image": "./images/Wrestler.png"
-      }
-    ]
-  }
+  "characters": [
+    {
+      "id": 1,
+      "image": "./public/KidFlash.png"
+    },
+    {
+      "id": 2,
+      "image": "./public/Mario.png"
+    },
+    {
+      "id": 3,
+      "image": "./public/MegaMan.png"
+    },
+    {
+      "id": 4,
+      "image": "./public/RunGuy.png"
+    },
+    {
+      "id": 5,
+      "image": "./public/Sensei.png"
+    },
+    {
+      "id": 6,
+      "image": "./public/Wrestler.png"
+    }
+  ],
+  "Questions": [
+    { 
+      "Q": "One gigabyte is equal to how many megabytes?",
+      "PA": ["100", "10,000", "1,000", "10"],
+      "RA": "1,000"
+    },
+    {
+      "Q": "What popular operating system, launched in 1991, also has its own mascot, Tux the penguin?",
+      "PA": ["Android", "IOS", "Ubuntu", "Linux"],
+      "RA": "Linux"
+    },
+    {
+      "Q": "Which video game console released in 2006 pioneered the use of motion controls in its gameplay?",
+      "PA": ["Xbox Kinect", "PlayStation 2", "Nintendo Wii", "Wii U"],
+      "RA": "Nintendo Wii"
+    },
+    {
+      "Q": "What is the world's best-selling PC game?",
+      "PA": ["Minecraft", "World of Warcraft", "Half-Life 2", "Doom"],
+      "RA": "Minecraft"
+    },
+    {
+      "Q": "Charles Babbage is known for creating the first... ?",
+      "PA": ["Software Language", "Mechanical Computer", "Vacuum Tube Transistor", "Digital Computer"],
+      "RA": "Mechanical Computer"
+    },
+    {
+      "Q": "Founded in 1889, Nintendo got its start by selling what product?",
+      "PA": ["Board Games", "Comic Books", "Playing Cards", "Wooden Figurines"],
+      "RA": "Playing Cards"
+    },
+    {
+      "Q": "How much storage did the first commercially available USB flash drive provide?",
+      "PA": ["1.44 MB", "64 MB", "256 MB", "8 MB"],
+      "RA": "8 MB"
+    },
+    {
+      "Q": "Which company invented the hard disk drive?",
+      "PA": ["IBM", "Xerox", "Hitachi", "Fujitsu"],
+      "RA": "IBM"
+    },
+    {
+      "Q": "What's the name of the landscape wallpaper that was a default on Windows XP?",
+      "PA": ["Majesty", "Bliss", "splendor", "Happiness"],
+      "RA": "Bliss"
+    },
+    {
+      "Q": "What was the first cross-platform web browser (circa 1993)?",
+      "PA": ["Nexus", "Internet Explorer", "Cello", "Mosaic"],
+      "RA": "Mosaic"
+    },
+    {
+      "Q": "Before becoming widely recognized the main character of Super Mario Bros., what was Mario named?",
+      "PA": ["Jumpman", "Hammer Jump", "Hopguy", "Bouncing Carpenter"],
+      "RA": "Jumpman"
+    },
+    {
+      "Q": "The first 'rickroll' occurred on 4chan's video game board and was disguised as a trailer for...",
+      "PA": ["Mass Effect", "The Elder Scrolls: Oblivion", "Half-Life 2", "GTA IV"],
+      "RA": "GTA IV"
+    },
+    {
+      "Q": "Who said this in 2004? 'Two years from now, (email) spam will be solved'",
+      "PA": ["Steve Jobs", "Bill Gates", "Tim Berners-Lee", "Marc Andreessen"],
+      "RA": "Bill Gates"
+    },
+    {
+      "Q": "The first 5MB hard drive weighed approximately...",
+      "PA": ["25 pounds", "250 pounds", "2000 pounds", "50 pounds"],
+      "RA": "2000 pounds"
+    },
+    {
+      "Q": "These famous tech personalities are all college dropouts, except...",
+      "PA": ["Michael Dell", "Mark Zuckerberg", "Steve Jobs", "Elon Musk"],
+      "RA": "Elon Musk"
+    },
+    {
+      "Q": "There were 1,000 Internet devices in 1984. By 1992, that figure reached...",
+      "PA": ["100,000", "100 million", "1 million", "1 billion"],
+      "RA": "1 million"
+    },
+    {
+      "Q": "Google's first tweet on Twitter was a message encoded in binary that read what?",
+      "PA": ["Im Feeling Lucky", "Dont Be Evil", "Do The Right Thing", "Is This Thing On?"],
+      "Ra": "Im Feeling Lucky"
+    },
+    {
+      "Q": "What was the first personal computer to be offered with a graphical user interface?",
+      "PA": ["SGI IRIS 1000", "Apple Lisa", "Commodore Amiga", "Tandy DeskMate"],
+      "RA": "Apple Lisa"
+    },
+    {
+      "Q": "Which video game franchise has collectively sold the most copies?",
+      "PA": ["Mario", "Pokemon", "Madden NFL", "Grand theft Auto"],
+      "RA": "Mario"
+    },
+    {
+      "Q": "What is the most commonly used password?",
+      "PA": ["password", "qwerty", "Google", "123456"],
+      "RA": "123456"
+    }
+]
+}

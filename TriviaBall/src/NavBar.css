@@ -14,7 +14,7 @@ ul{
 
 li{
     float: left;
-    padding-left: 10vw;
+    padding-left: 8vw;
 }
 
 
@@ -22,6 +22,10 @@ li{
     padding-left: 0;
 }
 
-i{
+.nes-mario{
     transform: scale(0.3);
+}
+
+.links{
+    font-size: 1.2vw;;
 }

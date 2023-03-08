@@ -1,0 +1,335 @@
+#sky{
+    height: 45%;
+    width:100%;
+    background-color: #03cffc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #ground{
+    height: 55%;
+    width:100%;
+    background-color: #13a60c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #field {
+    height: 30vh;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    background-color: #22bd11;
+    padding-left: 2vw;
+  }
+  
+  #endzone-left {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    background-color: #1c6e13;
+  }
+  
+  #zone-1 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    border-right: none;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    background-color: #22bd11;
+  }
+  
+  #number {
+    font-size: 1.5vw;
+    color: white;
+    text-align: right;
+    display: inline-block;
+    padding-top: 50px;
+  }
+  
+  .uzero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    transform: scale(-1, -1);
+    padding-top:50px;
+  }
+  
+  #zone-2 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    border-right: none;
+    background-color: #22bd11;
+  }
+  
+  #uone {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: white;
+    transform: scale(-1, -1);
+    text-align: right;
+    padding-top:50px;
+  }
+
+  
+  #zero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    padding-top: 50px;
+  }
+
+  
+  #zone-3 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    border-right: none;
+    background-color: #22bd11;
+  }
+  
+  #utwo {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: white;
+    transform: scale(-1, -1);
+    text-align: right;
+    padding-top: 48.5px;
+  }
+
+  
+  #two-zero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    padding-top: 50px;
+  }
+  
+  #zone-4 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    border-right: none;
+    background-color: #22bd11;
+  }
+  
+  #uthree {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: white;
+    transform: scale(-1, -1);
+    text-align: right;
+    padding-top: 48.5px;
+  }
+  
+  
+  #three-zero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    padding-top: 50px;
+  }
+  
+  #zone-5 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    border-right: none;
+    background-color: #22bd11;
+  }
+  
+  #ufour {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: white;
+    transform: scale(-1, -1);
+    text-align: right;
+    padding-top: 48.5px;
+  }
+
+  
+  #four-zero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    padding-top: 50px;
+  }
+  
+  #zone-6 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    border-right: none;
+    background-color: #22bd11;
+  }
+  
+  #ufive {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: white;
+    transform: scale(-1, -1);
+    text-align: right;
+    padding-top: 48.5px;
+  }
+  
+  
+  #five-zero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    padding-top: 50px;
+  }
+  
+  
+  #zone-7 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    border-right: none;
+    background-color: #22bd11;
+  }
+  
+  #ufour2 {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: white;
+    transform: scale(-1, -1);
+    text-align: right;
+    padding-top: 48.5px;
+  }
+
+  
+  #hfour-zero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    padding-top: 50px;
+  }
+  
+  
+  #zone-8 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    border-right: none;
+    background-color: #22bd11;
+  }
+  
+  #uthree2 {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: white;
+    transform: scale(-1, -1);
+    text-align: right;
+    padding-top: 48.5px;
+  }
+  
+  
+  #hthree-zero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    padding-top: 50px;
+  }
+  
+  
+  #zone-9 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    border-right: none;
+    background-color: #22bd11;
+  }
+  
+  #utwo2 {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: white;
+    transform: scale(-1, -1);
+    text-align: right;
+    padding-top: 48.5px;
+  }
+
+  
+  #htwo-zero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    padding-top: 50px;
+  }
+  
+  
+  #zone-10 {
+    height: 100%;
+    width: 8%;
+    border: solid 2px white;
+    border-right: none;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    background-color: #22bd11;
+  }
+  
+  #uone2 {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: white;
+    transform: scale(-1, -1);
+    text-align: right;
+    padding-top: 48.5px;
+  }
+  
+  #hone-zero {
+    font-size: 1.5vw;
+    color: white;
+    text-align: left;
+    display: inline-block;
+    padding-top: 50px;
+  }
+  
+  #endzone-right {
+    height: 100%;
+    width: 8%;
+    border-left: 4px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    background-color: #1c6e13;
+  }
+  
