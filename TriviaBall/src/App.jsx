@@ -79,13 +79,15 @@ function whenSubmit(val) {
       <div id="outer">
         <div id="inner">
           <div id="gamescreen">
+            <div id="screenvisual">
             <Routes>
               <Route path="/" element={<Home playablecharacter={playablecharacter} NavBar={NavBar} />}/>
               <Route path="/Profile" element={<Profile handleClick={handleClick} number={number} whenSubmit={whenSubmit} Characters={Characters}/>}/>
               <Route path="/Leaderboard" element={<Leaderboard/>}/>
               <Route path="/About" element={<About/>}/>
-              <Route path="/Gamefield" element={<GameField questionnumber={questionnumber} setQuestionNumber={setQuestionNumber} question={question}/>}/>
+              <Route path="/Gamefield" element={<GameField playablecharacter={playablecharacter} questionnumber={questionnumber} setQuestionNumber={setQuestionNumber} question={question}/>}/>
             </Routes>
+            </div>
           </div>
         </div>
       </div>

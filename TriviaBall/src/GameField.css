@@ -16,7 +16,8 @@
     font-size: 1vw;
     width: 50%;
     text-align: center;
-    border: 2px solid black;
+    padding-bottom: 0.5vw;
+    padding-top: 0.5vw;
 }
 
 .datas:hover{
@@ -30,9 +31,9 @@
 #mainquestion{
     column-span: all;
     width: 100%;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     text-align: center;
-    border: 2px solid black;
+    border-bottom: 2px solid black;
 }
   
 #header1{
@@ -40,7 +41,12 @@
     font-size: 2vw;
     justify-content: right;
     display: flex;
-    background-color: #03cffc ;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+
+#downtracker{
+  padding-right: 58%;
 }
 
   #ground1{
@@ -50,6 +56,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  #character-container{
+    height:30vh;
+    width:45.33vw;
+    border: 2px solid red;
+    padding: none;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+  }
+
+  #characterguy{
+    height: 4vw;
+    width: 4vw;
+    margin-left: 29%;
+    margin: none;
+    padding-left: none;
   }
 
   #field {

@@ -1,8 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
+
+
 #sky{
-  height: 45%;
+  height: 50%;
   width:100%;
   background-color: #03cffc;
   display: flex;
@@ -11,7 +13,7 @@
 }
 
 #ground{
-  height: 45%;
+  height: 50%;
   width:100%;
   background-color: #13a60c;
   display: flex;

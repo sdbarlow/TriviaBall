@@ -74,6 +74,15 @@ body {
   background: "https://lh5.ggpht.com/_FQ_CYAm3SyM/S2nma9MIDvI/AAAAAAAAozY/4dgk-Iy6CQU/ThinIceBUG5.gif?imgmax=800";
 }
 
+#screenvisual{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width:100%;
+  box-shadow: 0 0px 100px 50px white;
+}
 
 #joystick-hole {
   height: 17vh;

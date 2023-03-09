@@ -2,10 +2,19 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import './GameField.css'
 
-function GameField({ question, setQuestionNumber, questionnumber }){
-  const [timeRemaining, setTimeRemaining] = useState(15);
+function GameField({ question, setQuestionNumber, questionnumber, playablecharacter }){
+  const [timeRemaining, setTimeRemaining] = useState(20);
   const [restart, setRestart] = useState(true)
   const [questionorder, setQuestionOrder] = useState([])
+  const[downtracker, setDownTracker] = useState(1);
+  const[characterposition, setCharacterPosition] = (useState("21%"));
+ const[windetermine, setWinDetermine] = (useState(false))
+
+  useEffect(() => {
+    if(characterposition === "92%"){
+      setWinDetermine(!windetermine)
+    }
+  })
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -19,10 +28,34 @@ function GameField({ question, setQuestionNumber, questionnumber }){
   const style = isRed ? { color: 'red' } : {};
   const finished = 0;
 
+  function handleClick(e){
+      console.log(e.target.id)
+      console.log(e.target.textContent)
+      setTimeRemaining(20)
+        setRestart(!restart);
+        setQuestionNumber(questionnumber+1)
+        if(e.target.id === e.target.textContent){
+          if(characterposition === "77.9%"){
+            const initialPercentage = parseInt(characterposition); // Convert "499%" to 499
+            const newPercentage = initialPercentage + 15;
+            setCharacterPosition(`${newPercentage}%`);
+          }else{
+            const initialPercentage = parseInt(characterposition); // Convert "499%" to 499
+            const newPercentage = initialPercentage + 8.9;
+            setCharacterPosition(`${newPercentage}%`); // Convert 330 to "330%"
+          }
+        }else{
+            setDownTracker(downtracker + 1)
+        }
+      }
+  
+
+      
+
 
   function whenChanged(){
     if (finished === timeRemaining){
-        setTimeRemaining(15)
+        setTimeRemaining(20)
         setRestart(!restart);
         setQuestionNumber(questionnumber+1)
     } else {
@@ -32,23 +65,26 @@ function GameField({ question, setQuestionNumber, questionnumber }){
   if(question.length===0) return <div>Loading</div>
     return (
     <>
-        <div id="header1"><div onChange={whenChanged()} className="countdown" style={style}>{minutes}:{seconds < 10 ? '0' : ''}{seconds}</div></div>
+        <div id="header1"><span id="downtracker">Down:{downtracker}</span><div onChange={whenChanged()} className="countdown" style={style}>{minutes}:{seconds < 10 ? '0' : ''}{seconds}</div></div>
         <div id="sky1">
         <table id="tables">
             <tr>
                 <th colspan="2" id="mainquestion">{question.Q}</th>
             </tr>
             <tr>
-                <td className="datas">{question.PA[0]}</td>
-                <td className="datas">{question.PA[1]}</td>
+                <td onClick={(e) => handleClick(e)} id={question.RA} value={question.PA[0]} className="datas">{question.PA[0]}</td>
+                <td onClick={(e) => handleClick(e)} id={question.RA} value={question.PA[1]} className="datas">{question.PA[1]}</td>
             </tr>
             <tr>
-                <td className="datas">{question.PA[2]}</td>
-                <td className="datas">{question.PA[3]}</td>
+                <td onClick={(e) => handleClick(e)} id={question.RA} value={question.PA[2]} className="datas">{question.PA[2]}</td>
+                <td onClick={(e) => handleClick(e)} id={question.RA} value={question.PA[3]} className="datas">{question.PA[3]}</td>
             </tr>
         </table> 
         </div>
         <div id="ground1">
+        <div id="character-container">
+          <img id="characterguy"  style={{marginLeft:characterposition}} src={playablecharacter}/>
+        </div>
         <div id="field">
       <div id="endzone-left"></div>
       <div id="zone-1">
