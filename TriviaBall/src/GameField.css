@@ -1,13 +1,49 @@
-#sky{
-    height: 45%;
+#sky1{
+    height: 38%;
     width:100%;
     background-color: #03cffc;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+#tables{
+    width: 100%;
+}
+
+
+.datas{
+    font-size: 1vw;
+    width: 50%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.datas:hover{
+    text-decoration: underline;
+}
+
+#headerrow{
+    width: 100%;
+}
+
+#mainquestion{
+    column-span: all;
+    width: 100%;
+    font-size: 1.5vw;
+    text-align: center;
+    border: 2px solid black;
+}
   
-  #ground{
+#header1{
+    width: 100%;
+    font-size: 2vw;
+    justify-content: right;
+    display: flex;
+    background-color: #03cffc ;
+}
+
+  #ground1{
     height: 55%;
     width:100%;
     background-color: #13a60c;

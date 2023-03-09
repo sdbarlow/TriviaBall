@@ -1,12 +1,54 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './GameField.css'
 
-function GameField(){
+function GameField({ question, setQuestionNumber, questionnumber }){
+  const [timeRemaining, setTimeRemaining] = useState(15);
+  const [restart, setRestart] = useState(true)
+  const [questionorder, setQuestionOrder] = useState([])
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTimeRemaining(prevTime => prevTime - 1);
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, [restart]);
+  const minutes = Math.floor(timeRemaining / 60);
+  const seconds = timeRemaining % 60;
+  const isRed = timeRemaining <= 5;
+  const style = isRed ? { color: 'red' } : {};
+  const finished = 0;
+
+
+  function whenChanged(){
+    if (finished === timeRemaining){
+        setTimeRemaining(15)
+        setRestart(!restart);
+        setQuestionNumber(questionnumber+1)
+    } else {
+
+    }
+  }
+  if(question.length===0) return <div>Loading</div>
     return (
     <>
-        <div id="sky"></div>
-        <div id="ground">
+        <div id="header1"><div onChange={whenChanged()} className="countdown" style={style}>{minutes}:{seconds < 10 ? '0' : ''}{seconds}</div></div>
+        <div id="sky1">
+        <table id="tables">
+            <tr>
+                <th colspan="2" id="mainquestion">{question.Q}</th>
+            </tr>
+            <tr>
+                <td className="datas">{question.PA[0]}</td>
+                <td className="datas">{question.PA[1]}</td>
+            </tr>
+            <tr>
+                <td className="datas">{question.PA[2]}</td>
+                <td className="datas">{question.PA[3]}</td>
+            </tr>
+        </table> 
+        </div>
+        <div id="ground1">
         <div id="field">
       <div id="endzone-left"></div>
       <div id="zone-1">

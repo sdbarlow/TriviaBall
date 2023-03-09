@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react'
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useNavigate } from "react-router-dom"
 import './App.css'
 import Home from './Home';
 import Profile from './Profile';
@@ -10,12 +10,25 @@ import About from './About';
 import GameField from './GameField';
 
 function App() {
+  let navigate = useNavigate();
   const [count, setCount] = useState(0)
 
   const[number, setNumber] = useState(1);
 
   const[Characters, setCharacters] = useState([]);
   const[playablecharacter, setPlayableCharacter] = useState("")
+  const[questionnumber, setQuestionNumber] = useState(0);
+  const[question, setQuestion] = useState([]);
+  const[questionrandomizer, setQuestionRandomizer] = useState([1]);
+
+useEffect(() => {
+  fetch(`http://localhost:3000/Questions/${questionrandomizer[questionnumber]}`)
+  .then(resp => resp.json())
+  .then(data => {setQuestion(data)
+  })
+}, [questionnumber])
+
+console.log(question)
 
 useEffect(() => {
   fetch(`http://localhost:3000/characters/${number}`)
@@ -32,7 +45,14 @@ useEffect(() => {
   useEffect(() => {
       fetch("http://localhost:3000/characters")
       .then(resp => resp.json())
-      .then(data => setCharacters(data)) 
+      .then(data => {setCharacters(data)
+      navigate('/')
+      let arr =[];
+      for(let i=1; i<=19; i++){
+          arr.push(i);
+      }
+      setQuestionRandomizer(arr)}
+      ) 
   }, [])
 
 function whenSubmit(val) {
@@ -64,7 +84,7 @@ function whenSubmit(val) {
               <Route path="/Profile" element={<Profile handleClick={handleClick} number={number} whenSubmit={whenSubmit} Characters={Characters}/>}/>
               <Route path="/Leaderboard" element={<Leaderboard/>}/>
               <Route path="/About" element={<About/>}/>
-              <Route path="/Gamefield" element={<GameField/>}/>
+              <Route path="/Gamefield" element={<GameField questionnumber={questionnumber} setQuestionNumber={setQuestionNumber} question={question}/>}/>
             </Routes>
           </div>
         </div>
