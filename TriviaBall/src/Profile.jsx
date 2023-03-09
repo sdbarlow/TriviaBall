@@ -16,7 +16,7 @@ function Profile({Characters, whenSubmit, handleClick, number}){
 
     return(
     <div className="parent">
-        <Link to="/"><span id="home" className="nes-text is-primary">Back</span></Link><span id="header" className="nes-text is-primary">Choose A Character</span>
+        <Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link><span id="header" className="nes-text is-primary">Choose A Character</span>
         <div className="grid">
             {renderIcons}
                 <img className="image" src="../Images/plusSign.png" onClick={() => document.getElementById('dialog-default').showModal()}/>

@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
 #header{
     font-size: 2vw;
 text-align: center;
@@ -6,11 +9,8 @@ padding-left: none;
 }
 
 #home{
-    display: block;
     color: black;
     font-size: 1vw;
-    padding-left: 0.5vw;
-    padding-top: 0.5vw;
 }
 
 .parent{

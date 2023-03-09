@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+
 #sky1{
     height: 38%;
     width:100%;
@@ -5,6 +9,73 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  #winmessage{
+    display: grid;
+    grid-template-areas:
+    'Main right menu'
+    'Footer Footer Footer';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    background-color: black;
+    z-index: 3;
+    border-radius: 10%;
+    border: 5px solid white;
+    position: absolute;
+    justify-content: center;
+    top: 28vh;
+    width: 30vw;
+    height: 25vh;
+  }
+
+  #lossmessage{
+    display: grid;
+    grid-template-areas:
+    'Main right menu'
+    'Footer Footer Footer';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    background-color: black;
+    z-index: 3;
+    border-radius: 10%;
+    border: 5px solid white;
+    position: absolute;
+    justify-content: center;
+    top: 28vh;
+    width: 30vw;
+    height: 25vh;
+  }
+
+  .item5{
+    grid-area: Footer;
+    text-align: center;
+  }
+
+  .item1{
+    grid-area: Main;
+    align-self: center;
+  }
+
+  .item2{
+    grid-area: right;
+    align-self: center;
+  }
+
+  .item3{
+    grid-area: menu;
+    align-self: center;
+  }
+
+  .item4{
+    grid-area: Footer;
+    text-align: center;
+  }
+
+  #youwin{
+    color: gold;
   }
 
 #tables{
@@ -17,7 +88,6 @@
     width: 50%;
     text-align: center;
     padding-bottom: 0.5vw;
-    padding-top: 0.5vw;
 }
 
 .datas:hover{
@@ -31,9 +101,10 @@
 #mainquestion{
     column-span: all;
     width: 100%;
-    font-size: 1.2vw;
+    font-size: 1vw;
     text-align: center;
-    border-bottom: 2px solid black;
+    vertical-align:middle;
+    padding-bottom: 1vw;
 }
   
 #header1{
@@ -46,7 +117,28 @@
 }
 
 #downtracker{
-  padding-right: 58%;
+  align-items: left;
+  padding-top: 0.5vw;
+  font-size: 1.5vw;
+  padding-right: 1.5vw;
+}
+
+.countdown{
+  padding-top: 0.5vw;
+  font-size: 1.5vw;
+  align-items: right;
+  padding-right: 1vw;
+
+}
+
+#progress-bar{
+  margin-left: 1vw;
+  margin-right: 3vw;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+  height: 4vh;
+  width: 28vw;
+  align-items: center;
 }
 
   #ground1{
@@ -61,7 +153,6 @@
   #character-container{
     height:30vh;
     width:45.33vw;
-    border: 2px solid red;
     padding: none;
     position: absolute;
     display: flex;
@@ -73,7 +164,6 @@
   #characterguy{
     height: 4vw;
     width: 4vw;
-    margin-left: 29%;
     margin: none;
     padding-left: none;
   }

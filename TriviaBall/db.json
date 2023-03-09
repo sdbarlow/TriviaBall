@@ -126,7 +126,7 @@
       "id": 17,
       "Q": "Google's first tweet on Twitter was a message encoded in binary that read what?",
       "PA": ["Im Feeling Lucky", "Dont Be Evil", "Do The Right Thing", "Is This Thing On?"],
-      "Ra": "Im Feeling Lucky"
+      "RA": "Im Feeling Lucky"
     },
     {
       "id": 18,

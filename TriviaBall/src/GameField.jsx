@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './GameField.css'
 
 function GameField({ question, setQuestionNumber, questionnumber, playablecharacter }){
@@ -9,12 +10,56 @@ function GameField({ question, setQuestionNumber, questionnumber, playablecharac
   const[downtracker, setDownTracker] = useState(1);
   const[characterposition, setCharacterPosition] = (useState("21%"));
  const[windetermine, setWinDetermine] = (useState(false))
+ const[progressbar, setProgressBar] = useState(20)
+ const[lossdetermine, setLossDetermine] = useState(false);
+
+ const navigate = useNavigate();
 
   useEffect(() => {
     if(characterposition === "92%"){
       setWinDetermine(!windetermine)
     }
-  })
+  }, [characterposition])
+
+  useEffect(() => {
+    if(progressbar === 100){
+    const timer = setTimeout(() => {
+      navigate('/');
+    }, 3000);
+  
+    return () => {
+      clearTimeout(timer);
+    }};
+  }, [windetermine]);
+
+useEffect(() => {
+  if(downtracker > 4 || characterposition == "-2%") {
+    setLossDetermine(!lossdetermine)
+    const timer = setTimeout(() => {
+      navigate('/');
+    }, 3000);
+  
+    return () => {
+      clearTimeout(timer);
+    }
+  }
+}, [progressbar, downtracker])
+
+  useEffect(() => {
+    if(timeRemaining === 0){
+      if(characterposition === "13%"){
+        const initialPercentage = parseInt(characterposition); 
+        const newPercentage = initialPercentage - 15;
+        setCharacterPosition(`${newPercentage}%`);
+        setProgressBar(progressbar - 10);
+      }else{
+        const initialPercentage = parseInt(characterposition); 
+        const newPercentage = initialPercentage - 8;
+        setCharacterPosition(`${newPercentage}%`);
+        setProgressBar(progressbar - 10);
+      }
+    }
+  }, [timeRemaining])
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -26,7 +71,7 @@ function GameField({ question, setQuestionNumber, questionnumber, playablecharac
   const seconds = timeRemaining % 60;
   const isRed = timeRemaining <= 5;
   const style = isRed ? { color: 'red' } : {};
-  const finished = 0;
+  const finished = -1;
 
   function handleClick(e){
       console.log(e.target.id)
@@ -35,14 +80,16 @@ function GameField({ question, setQuestionNumber, questionnumber, playablecharac
         setRestart(!restart);
         setQuestionNumber(questionnumber+1)
         if(e.target.id === e.target.textContent){
-          if(characterposition === "77.9%"){
-            const initialPercentage = parseInt(characterposition); // Convert "499%" to 499
+          if(characterposition > "70.9%"){
+            const initialPercentage = parseInt(characterposition); 
             const newPercentage = initialPercentage + 15;
             setCharacterPosition(`${newPercentage}%`);
+            setProgressBar(progressbar + 10);
           }else{
-            const initialPercentage = parseInt(characterposition); // Convert "499%" to 499
-            const newPercentage = initialPercentage + 8.9;
-            setCharacterPosition(`${newPercentage}%`); // Convert 330 to "330%"
+            const initialPercentage = parseInt(characterposition); 
+            const newPercentage = initialPercentage + 8;
+            setCharacterPosition(`${newPercentage}%`);
+            setProgressBar(progressbar + 10);
           }
         }else{
             setDownTracker(downtracker + 1)
@@ -62,17 +109,32 @@ function GameField({ question, setQuestionNumber, questionnumber, playablecharac
 
     }
   }
-  if(question.length===0) return <div>Loading</div>
+
+  console.log(characterposition)
+  if(question.length===0)
+    return <div>Loading</div>
     return (
     <>
-        <div id="header1"><span id="downtracker">Down:{downtracker}</span><div onChange={whenChanged()} className="countdown" style={style}>{minutes}:{seconds < 10 ? '0' : ''}{seconds}</div></div>
+        <div id="header1"><span id="downtracker">Down:{downtracker}</span><progress id="progress-bar" class="nes-progress is-success" value={progressbar} max="100"></progress><div onChange={whenChanged()} className="countdown" style={style}>{minutes}:{seconds < 10 ? '0' : ''}{seconds}</div></div>
         <div id="sky1">
+          {lossdetermine ? <><div id="lossmessage">
+            <div className="item1"><i class="nes-icon is-large is-half heart"></i></div>
+            <div className="item2"><i class="nes-icon is-large heart is-empty"></i></div>
+            <div className="item3"><i class="nes-icon is-large heart is-empty"></i></div>
+            <div className="item5"><h1 id="youwin">You Lost!!</h1></div>
+          </div> </> : <></>}
+          {windetermine ? <><div id="winmessage">
+            <div className="item1"><i class="nes-icon trophy is-large"></i></div>
+            <div className="item2"><i class="nes-icon trophy is-large"></i></div>
+            <div className="item3"><i class="nes-icon trophy is-large"></i></div>
+            <div className="item4"><h1 id="youwin">You Win!!</h1></div>
+          </div> </> : <></>}
         <table id="tables">
             <tr>
-                <th colspan="2" id="mainquestion">{question.Q}</th>
+                <th colspan="2" id="mainquestion"><span>{question.Q}</span></th>
             </tr>
             <tr>
-                <td onClick={(e) => handleClick(e)} id={question.RA} value={question.PA[0]} className="datas">{question.PA[0]}</td>
+            <td onClick={(e) => handleClick(e)} id={question.RA} value={question.PA[0]} className="datas">{question.PA[0]}</td>
                 <td onClick={(e) => handleClick(e)} id={question.RA} value={question.PA[1]} className="datas">{question.PA[1]}</td>
             </tr>
             <tr>
