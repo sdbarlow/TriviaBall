@@ -141,7 +141,7 @@ body {
   transform: rotate(90deg);
 }
 
-#joystick {
+/* #joystick {
   height: 16vh;
   width: 2vh;
   position: absolute;
@@ -151,7 +151,7 @@ body {
   background-color: gray;
   z-index: 1;
   transform: rotate(150deg);
-}
+} */
 
 #joystickball {
   height: 12vh;

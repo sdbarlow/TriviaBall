@@ -15,9 +15,10 @@ function Profile({Characters, whenSubmit, handleClick, number}){
     }
 console.log(Characters.length)
 
-    return(
+    return(<>
+        <div className="navbar4"><Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link></div>
     <div className="parent">
-        <Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link><span id="header" className="nes-text is-primary">Choose A Character</span>
+        <span id="header" className="nes-text is-primary">Choose A Character</span>
         <div className="grid">
             {renderIcons}
                 {Characters.length === 9 ? <></> : <><img className="image" src="../Images/plusSign.png" onClick={() => document.getElementById('dialog-default').showModal()}/></>}
@@ -33,6 +34,7 @@ console.log(Characters.length)
                     </dialog>
             </div>
         </div>
+        </>
     )
 }
 

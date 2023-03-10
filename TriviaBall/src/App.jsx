@@ -17,10 +17,33 @@ function App() {
   const[number, setNumber] = useState(1);
   const[Characters, setCharacters] = useState([]);
   const[playablecharacter, setPlayableCharacter] = useState("")
+  const[joystickmoved, setJoystickMoved] = useState(true)
 
   const [question, setQuestion] = useState({});
 const [questionnumber, setQuestionNumber] = useState(0);
 const [shuffledQuestionIndexes, setShuffledQuestionIndexes] = useState([]);
+const [joystickStyle, setJoystickStyle] = useState({
+  height: '16vh',
+  width: '2vh',
+  position: 'absolute',
+  left: '33.2vh',
+  top: '76vh',
+  border: '2px solid black',
+  backgroundColor: 'gray',
+  zIndex: 1,
+  transform: 'rotate(150deg)',
+});
+
+const [joystickBallStyle, setJoystickBallStyle] = useState({
+  height: '12vh',
+  width: '12vh',
+  backgroundColor: '#ffcc00',
+  position: 'absolute',
+  left: '21.3vh',
+  top: '65.9vh',
+  border: '2px solid black',
+  borderRadius: '100%',
+});
 
 const fetchedQuestionsRef = useRef([]);
 
@@ -75,6 +98,58 @@ function shuffle(array) {
 }
 
 console.log(question)
+
+function handleJoystickClick(){
+  if(joystickmoved){
+ setJoystickStyle({
+  height: '16vh',
+  width: '2vh',
+  position: 'absolute',
+  left: '47.2vh',
+  top: '76vh',
+  border: '2px solid black',
+  backgroundColor: 'gray',
+  zIndex: 1,
+  transform: 'rotate(30deg)',
+ })
+
+ setJoystickBallStyle({
+  height: '12vh',
+  width: '12vh',
+  backgroundColor: '#ffcc00',
+  position: 'absolute',
+  left: '48.3vh',
+  top: '65.9vh',
+  border: '2px solid black',
+  borderRadius: '100%',
+ })
+ setJoystickMoved(!joystickmoved)
+} else {
+  setJoystickStyle({
+    height: '16vh',
+  width: '2vh',
+  position: 'absolute',
+  left: '33.2vh',
+  top: '76vh',
+  border: '2px solid black',
+  backgroundColor: 'gray',
+  zIndex: 1,
+  transform: 'rotate(150deg)',
+  })
+  setJoystickBallStyle({
+    height: '12vh',
+  width: '12vh',
+  backgroundColor: '#ffcc00',
+  position: 'absolute',
+  left: '21.3vh',
+  top: '65.9vh',
+  border: '2px solid black',
+  borderRadius: '100%',
+  })
+  setJoystickMoved(!joystickmoved)
+}
+
+}
 
 useEffect(() => {
   fetch(`http://localhost:3000/characters/${number}`)
@@ -132,9 +207,9 @@ console.log(question)
       <div className="realArcade"></div>
       <div className="realArcade2"></div>
       <div id="button2"></div>
-      <div id="joystick"></div>
-      <div id="joystickball">
-        <div id="joystickballcrescent1"></div>
+      <div style={joystickStyle}id="joystick"></div>
+      <div id="joystickball" style={joystickBallStyle}>
+        <div onClick={handleJoystickClick} id="joystickballcrescent1"></div>
       </div>
       <div id="joystick-hole"></div>
     </>

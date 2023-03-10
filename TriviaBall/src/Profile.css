@@ -13,13 +13,21 @@ padding-left: none;
     font-size: 1vw;
 }
 
-.parent{
-    height: 100%;
+.navbar4{
+    height: 5%;
     width: 100%;
-    display: grid;
-    grid-template-rows: 1vh 10vh;
     background-color: white;
-    overflow: hidden;
+    }
+
+
+.parent{
+    height: 95%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid{
