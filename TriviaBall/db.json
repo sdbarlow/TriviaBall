@@ -145,6 +145,168 @@
       "Q": "What is the most commonly used password?",
       "PA": ["password", "qwerty", "Google", "123456"],
       "RA": "123456"
+    },
+    {
+      "id": 21,
+      "Q": "What is the longest-running animated television show in the United States?",
+      "PA": ["Family Guy", "The Simpsons", "South Park", "Futurama"],
+      "RA": "The Simpsons"
+    },
+    {
+      "id": 22,
+      "Q": "Robyn Fenty is the real name of which R&B singer?",
+      "PA": ["Alicia Keys", "Rihanna", "Mariah Carey", "Beyoncé"],
+      "RA": "Rihanna"
+    },
+    {
+      "id": 23,
+      "Q": "When were the Academy Awards first televised?",
+      "PA": ["1963", "1947", "1929", "1953"],
+      "RA": "1953"
+    },
+    {
+      "id": 24,
+      "Q": "Who won the first season of the American Idol?",
+      "PA": ["Kacey Musgraves", "Carrie Underwood", "Miranda Lambert", "Kelly Clarkson"],
+      "RA": "Kelly Clarkson"
+    },
+    {
+      "id": 25,
+      "Q": "In The Wizard of Oz, who played the Wicked Witch of the West?",
+      "PA": ["Billy Barty", "Judi Dench", "Judy Garland", "Margaret Hamilton"],
+      "RA": "Margaret Hamilton"
+    },
+    {
+      "id": 26,
+      "Q": "Who is the first actor to play James Bond in film?",
+      "PA": ["Pierce Brosnan", "Sean Connery", "Roger Moore", "Daniel Craig"],
+      "RA": "123456"
+    },
+    {
+      "id": 27,
+      "Q": "Who is the voice of Remy the Rat in Ratatouille?",
+      "PA": ["Will Geer", "Patton Oswalt", "Will Patton", "Brad Garrett"],
+      "RA": "Patton Oswalt"
+    },
+    {
+      "id": 28,
+      "Q": "When did the famous amusement park Disneyland open?",
+      "PA": ["1975", "1989", "1955", "1969"],
+      "RA": "1955"
+    },
+    {
+      "id": 29,
+      "Q": "Which of these films parodied the Cold War?",
+      "PA": ["Transformers", "Patton", "Dr. Strangelove", "Endless Summer"],
+      "RA": "Dr. Strangelove"
+    },
+    {
+      "id": 30,
+      "Q": "In which of these countries did manga originate?",
+      "PA": ["Korea", "Canada", "China", "Japan"],
+      "RA": "Japan"
+    },
+    {
+      "id": 31,
+      "Q": "What is the name of the Doctor''s time machine in the television series 'Doctor Who'?",
+      "PA": ["Stargate", "The Time Machine", "Cerebro", "TARDIS"],
+      "RA": "TARDIS"
+    },
+    {
+      "id": 32,
+      "Q": "In the film Pan's Labyrinth, what is the little girl named?",
+      "PA": ["Linda", "Ofelia", "Sofia", "Serena"],
+      "RA": "Ofelia"
+    },
+    {
+      "id": 33,
+      "Q": "Which singer is known as the “King of Rock and Roll”?",
+      "PA": ["Bruce Springsteen", "Chuck Berry", "Elvis Presley", "Justin Bieber"],
+      "RA": "Elvis Presley"
+    },
+    {
+      "id": 34,
+      "Q": "Who played the role of Captain Jack Sparrow in the Pirates of the Caribbean movies?",
+      "PA": ["Lou Ferrigno", "Tom Hollander", "Johnny Depp", "Orlando Bloom"],
+      "RA": "Johnny Depp"
+    },
+    {
+      "id": 35,
+      "Q": "Which character does Bryan Cranstons play in the series 'Breaking Bad'?",
+      "PA": ["Tony Soprano", "Michael Scofield", "Walter White", "Rick Grimes"],
+      "RA": "Walter White"
+    },
+    {
+      "id": 36,
+      "Q": "Reginald Kenneth Dwight is better known by what name?",
+      "PA": ["Bob Dylan", "Elton John", "John Lennon", "Paul McCartney"],
+      "RA": "Elton John"
+    },
+    {
+      "id": 37,
+      "Q": "Bolero, a lively dance with strongly marked rhythm, is associated with which country?",
+      "PA": ["France", "Italy", "Spain", "Poland"],
+      "RA": "Spain"
+    },
+    {
+      "id": 38,
+      "Q": "Roughly three percent of mammals are monogamous. Which of these mammals mate for life?",
+      "PA": ["silverback gorillas", "African elephants", "fruit bats", "prairie voles"],
+      "RA": "prairie voles"
+    },
+    {
+      "id": 39,
+      "Q": "Cleopatra was romantically linked to what historical figure?",
+      "PA": ["Genghis Khan", "Julius Caesar", "King Tut", "Alexander the Great"],
+      "RA": "Julius Caesar"
+    },
+    {
+      "id": 40,
+      "Q": "What actor won back-to-back best actor Oscars in 1994 and 1995?",
+      "PA": ["Leonardo DiCaprio", "Tom Cruise", "Kevin Costner", "Tom Hanks"],
+      "RA": "Tom Hanks"
+    },
+    {
+      "id": 41,
+      "Q": "Originally designed to resemble a knight, the Oscar statue holds what object?",
+      "PA": ["helmet", "shield", "sword", "chalice"],
+      "RA": "sword"
+    },
+    {
+      "id": 42,
+      "Q": "Most of the Seven Wonders of the Ancient World are located around what body of water?",
+      "PA": ["Mediterranean Sea", "Yellow Sea", "Caribbean Sea", "Sargasso Sea"],
+      "RA": "Mediterranean Sea"
+    },
+    {
+      "id": 43,
+      "Q": "What is the main ingredient in meringue, which makes it light and fluffy?",
+      "PA": ["egg whites", "marshmallow", "cream", "gelatin"],
+      "RA": "egg whites"
+    },
+    {
+      "id": 44,
+      "Q": "Which of these grains does not contain gluten?",
+      "PA": ["wheat", "farro", "buckwheat", "barley"],
+      "RA": "buckwheat"
+    },
+    {
+      "id": 45,
+      "Q": "Jesse Owens made history by winning four Olympic gold medals in what city?",
+      "PA": ["Moscow", "Rome", "Berlin", "London"],
+      "RA": "Berlin"
+    },
+    {
+      "id": 46,
+      "Q": "“Hotline Bling”?",
+      "PA": ["Drake", "Lil Wayne", "the Weeknd", "Travis Scott"],
+      "RA": "Drake"
+    },
+    {
+      "id": 47,
+      "Q": "“Shake It Off”?",
+      "PA": ["Gwen Stefani", "Jennifer Lopez", "p!nk", "Taylor Swift"],
+      "RA": "Taylor Swift"
     }
 ]
 }

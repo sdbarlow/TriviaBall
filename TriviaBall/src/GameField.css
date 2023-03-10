@@ -5,7 +5,7 @@
 #sky1{
     height: 38%;
     width:100%;
-    background-color: #03cffc;
+    background: linear-gradient(#0282FE 12.5%, #0B8CFF 25%, #1893FD 37.5%, #2AA0FE 50%, #40AFFE 62.5%, #4DBDFF 75%, #71D4FF 87.5%, #7FE1FE 100% );
     display: flex;
     justify-content: center;
     align-items: center;

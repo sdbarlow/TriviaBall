@@ -90,6 +90,22 @@ body {
   border-radius: 60px 60px 0px 0px/320px 490px 0px 0px;
 }
 
+#gamescreen-border{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+  height: 67.5%;
+  width: 52%;
+  border: 2px solid black;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  pointer-events: none;
+}
+
 #gamescreen {
   display: flex;
   justify-content: center;
@@ -97,9 +113,11 @@ body {
   flex-direction: column;
   height: 85%;
   width: 75%;
-  border: 20px solid black;
+  border-left:30px solid #3F4446;
+  border-right: 30px solid #3F4446;
+  border-top: 10px solid #3F4446;
+  border-bottom: 10px solid #3F4446;
   border-radius: 20px;
-  background: "https://lh5.ggpht.com/_FQ_CYAm3SyM/S2nma9MIDvI/AAAAAAAAozY/4dgk-Iy6CQU/ThinIceBUG5.gif?imgmax=800";
 }
 
 #screenvisual{

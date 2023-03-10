@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from "react-router-dom"
+import { useRef } from 'react';
 import './App.css'
 import Home from './Home';
 import Profile from './Profile';
@@ -18,17 +19,46 @@ function App() {
   const[playablecharacter, setPlayableCharacter] = useState("")
 
   const [question, setQuestion] = useState({});
-  const [questionnumber, setQuestionNumber] = useState(0);
-  const questionrandomizer = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-  const shuffledQuestionIndexes = shuffle(questionrandomizer);
+const [questionnumber, setQuestionNumber] = useState(0);
+const shuffledQuestionIndexes = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45,]);
+
+const fetchedQuestionsRef = useRef([]);
 
 useEffect(() => {
+  fetch("http://localhost:3000/characters")
+    .then(resp => resp.json())
+    .then(data => {
+      setCharacters(data)
+      let arr = [];
+      for (let i = 1; i <= 19; i++) {
+        arr.push(i);
+      }
+      setShuffledQuestionIndexes(shuffleArray(arr));
+      setQuestionNumber(1);
+    });
+}, []);
 
-  fetch(`http://localhost:3000/Questions/${shuffledQuestionIndexes[questionnumber]}`)
-  .then(resp => resp.json())
-  .then(data => {setQuestion(data)
-  })
-}, [questionnumber]);
+useEffect(() => {
+  const fetchedQuestions = fetchedQuestionsRef.current;
+  if (shuffledQuestionIndexes.length > 0 && fetchedQuestions.includes(shuffledQuestionIndexes[questionnumber])) {
+    // question has already been fetched, so skip to the next one
+    setQuestionNumber(questionnumber + 1);
+  } else if (shuffledQuestionIndexes.length > 0) {
+    // fetch new question
+    fetch(`http://localhost:3000/Questions/${shuffledQuestionIndexes[questionnumber]}`)
+      .then(resp => resp.json())
+      .then(data => {
+        setQuestion(data);
+        fetchedQuestionsRef.current = [...fetchedQuestions, shuffledQuestionIndexes[questionnumber]];
+      });
+  }
+}, [questionnumber, shuffledQuestionIndexes]);
+
+useEffect(() => {
+  if (Characters.length > 0 && shuffledQuestionIndexes.length > 0) {
+    navigate('/');
+  }
+}, [Characters, shuffledQuestionIndexes]);
 
 function shuffle(array) {
   const newArray = [...array];
@@ -53,19 +83,6 @@ useEffect(() => {
     setNumber(id);
 }
 
-  useEffect(() => {
-      fetch("http://localhost:3000/characters")
-      .then(resp => resp.json())
-      .then(data => {setCharacters(data)
-      navigate('/')
-      let arr =[];
-      for(let i=1; i<=19; i++){
-          arr.push(i);
-      }
-      setQuestionRandomizer(arr)}
-      ) 
-  }, [])
-
 function whenSubmit(val) {
   fetch("http://localhost:3000/characters", {
     method: 'POST',
@@ -83,14 +100,17 @@ function whenSubmit(val) {
   document.getElementById('dialog-default').hideModal()
 }
 
+console.log(question)
+
   return (
     <>
-      <div className="left-bar"></div>
-      <div className="left-bar-border"></div>
-      <div className="right-bar"></div>
-      <div className="right-bar-border"></div>
-      <div id="outer">
-        <div id="inner">
+    <div className="left-bar"></div>
+    <div className="left-bar-border"></div>
+    <div className="right-bar"></div>
+    <div className="right-bar-border"></div>
+    <div id="outer">
+      <div id="inner">
+        <div id="gamescreen-border"></div>
           <div id="gamescreen">
             <div id="screenvisual">
             <Routes>

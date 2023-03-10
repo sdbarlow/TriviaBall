@@ -13,6 +13,8 @@ function GameField({ question, setQuestionNumber, questionnumber, playablecharac
  const[progressbar, setProgressBar] = useState(20)
  const[lossdetermine, setLossDetermine] = useState(false);
 
+console.log(question)
+
  const navigate = useNavigate();
 
   useEffect(() => {
