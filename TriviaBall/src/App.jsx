@@ -20,7 +20,7 @@ function App() {
 
   const [question, setQuestion] = useState({});
 const [questionnumber, setQuestionNumber] = useState(0);
-const shuffledQuestionIndexes = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45,]);
+const [shuffledQuestionIndexes, setShuffledQuestionIndexes] = useState([]);
 
 const fetchedQuestionsRef = useRef([]);
 
@@ -55,10 +55,15 @@ useEffect(() => {
 }, [questionnumber, shuffledQuestionIndexes]);
 
 useEffect(() => {
+  setShuffledQuestionIndexes(shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]));
+}, []);
+
+// The effect now only depends on the `Characters` state variable
+useEffect(() => {
   if (Characters.length > 0 && shuffledQuestionIndexes.length > 0) {
     navigate('/');
   }
-}, [Characters, shuffledQuestionIndexes]);
+}, [Characters]);
 
 function shuffle(array) {
   const newArray = [...array];

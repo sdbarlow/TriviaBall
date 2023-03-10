@@ -13,13 +13,14 @@ function Profile({Characters, whenSubmit, handleClick, number}){
         e.preventDefault();
         whenSubmit(value)
     }
+console.log(Characters.length)
 
     return(
     <div className="parent">
         <Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link><span id="header" className="nes-text is-primary">Choose A Character</span>
         <div className="grid">
             {renderIcons}
-                <img className="image" src="../Images/plusSign.png" onClick={() => document.getElementById('dialog-default').showModal()}/>
+                {Characters.length === 9 ? <></> : <><img className="image" src="../Images/plusSign.png" onClick={() => document.getElementById('dialog-default').showModal()}/></>}
                 <dialog class="nes-dialog" id="dialog-default">
                         <form method="dialog" onSubmit={handleSubmit}>
                         <p class="title">Enter An Image</p>

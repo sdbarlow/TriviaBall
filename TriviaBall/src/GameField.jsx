@@ -112,8 +112,9 @@ useEffect(() => {
     }
   }
 
-  console.log(characterposition)
-  if(question.length===0)
+  console.log(question)
+
+  if(Object.keys(question).length === 0)
     return <div>Loading</div>
     return (
     <>
